@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Gayathri&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Gayathri", sans-serif;
+    /*font-size: 16px;*/
+}
+
+body {
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    color: #eee8;
+}
+
+.album-select-block {
+    width: 10%;
+    border: 2px solid purple;
+    display: inline;
+    background-color : #eee;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 24px;
+    padding-top: 5px;
+    /*justify-content: space-evenly;*/
+}
+
+.small-picture-block {
+    width: 44%;
+    border: 4px solid green;
+    display: inline ;
+    background-color : #ccc;
+    /*justify-content: space-evenly;*/
+}
+
+.big-picture-block {
+    width: 44%;
+    /*height: 500%;*/
+    /*border: 4px solid red;*/
+    /*background-color : #ccc;*/
+    /*position: absolute;*/
+    display: inline;
+}
+
+.small-picture {
+    width: 200px;
+    height: 200px;
+    /*margin: 1px;*/
+    object-fit: contain;
+    background: white;
+    border: 2px solid black;
+}
+.small-picture:hover {
+    transform: scale(1.2);
+    border: 4px solid black;
+    cursor: pointer;
+}
+
+.big-picture {
+    width: 100%;
+    /*height: 400px;*/
+    object-fit: scale-down;
+    border: 4px solid red;
+}
+
+.album-button {
+    width: 100%;
+    /*border: 4px solid purple;*/
+    /*place-items : center*/
+    text-align: start;
+    background-color : #666;
+    word-wrap: break-word;
+    color : #eee;
+    padding: 5px;
+    font-size: 16px;
+    border-bottom: 2px solid #aaa;
+}
+
+.album-button:hover {
+    background-color : darkgreen;
+    cursor: pointer;
+}
