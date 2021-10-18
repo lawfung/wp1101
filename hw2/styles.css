@@ -81,11 +81,11 @@ h1 {
     object-fit: contain;
     background: white;
     border: 2px solid black;
+    transition: transform 0.2s;
 }
 .small-picture:hover {
     transform: scale(1.2);
     cursor: pointer;
-    /*object-fit: cover;*/
 }
 
 .small-clicked {
@@ -130,14 +130,6 @@ h1 {
 
 .album-clicked {
     border: 3px solid yellow;
-}
-
-#delete-album:hover {
-    
-}
-
-#delete-image:hover {
-    
 }
 
 .all-button:hover {
