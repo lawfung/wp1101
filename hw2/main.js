@@ -1,15 +1,16 @@
 let cur_album;
 let cur_img;
 let pic = [
-	"https://phycat.files.wordpress.com/2017/03/max_planck_1878.gif",
-	"https://s1.52poke.wiki/wiki/thumb/b/b9/172Pichu.png/300px-172Pichu.png",
-	"https://s1.52poke.wiki/wiki/thumb/e/e4/173Cleffa.png/300px-173Cleffa.png",
-	"https://s1.52poke.wiki/wiki/thumb/6/6b/175Togepi.png/300px-175Togepi.png",
-	"https://s1.52poke.wiki/wiki/thumb/5/5b/177Natu.png/300px-177Natu.png",
-	"https://s1.52poke.wiki/wiki/thumb/f/f4/178Xatu.png/300px-178Xatu.png",
-	"https://s1.52poke.wiki/wiki/thumb/6/6b/179Mareep.png/300px-179Mareep.png",
-	"https://s1.52poke.wiki/wiki/thumb/6/6f/180Flaaffy.png/300px-180Flaaffy.png",
-	"https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg"
+	"https://cdn.pixabay.com/photo/2017/05/14/12/55/aaa-2311996_960_720.jpg",
+	"https://cdn.pixabay.com/photo/2018/02/06/19/07/motorcycle-3135467_960_720.jpg",
+	"https://cdn.pixabay.com/photo/2014/07/21/17/20/abc-398739_960_720.jpg",
+	"https://cdn.pixabay.com/photo/2019/07/30/10/19/bird-on-a-wire-4372629_1280.jpg",
+	"https://cdn.pixabay.com/photo/2015/06/29/00/50/boat-825110_1280.jpg",
+	"https://cdn.pixabay.com/photo/2017/10/25/00/20/love-a-while-2886646_1280.jpg",
+	"https://cdn.pixabay.com/photo/2017/07/06/07/50/formation-flight-2477287_960_720.jpg",
+	"https://cdn.pixabay.com/photo/2016/06/02/12/59/letter-a-1431090_1280.jpg",
+	"https://cdn.pixabay.com/photo/2017/05/09/14/16/letter-b-sign-2298353_960_720.jpg",
+	"https://cdn.pixabay.com/photo/2017/11/09/21/39/bengal-cat-2934716_960_720.jpg"
 ]
 
 function init_album(x, y){
@@ -21,28 +22,22 @@ let album = [
 	init_album([pic[0], pic[1], pic[2], pic[8]], "album : Ich habe keine Freude."),
 	init_album([pic[3], pic[4], pic[5], pic[6], pic[7], pic[4], pic[5], pic[6], pic[7], pic[4], pic[5], pic[6], pic[7]], "album2"),
 	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3"),
-	init_album([], "album3")
+	init_album([], "album4"),
+	init_album([], "album5"),
+	init_album([], "album6"),
+	init_album([], "album7"),
+	init_album([], "album8"),
+	init_album([], "album9"),
+	init_album([], "album10"),
+	init_album([], "album11"),
+	init_album([], "album12"),
+	init_album([], "album13"),
+	init_album([], "album14"),
+	init_album([], "album15"),
+	init_album([], "album16"),
+	init_album([], "album17"),
+	init_album([], "album18"),
+	init_album([], "album19")
 ]
 
 let small_block = document.getElementById("small-picture-block") 
