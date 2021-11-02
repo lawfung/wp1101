@@ -32,7 +32,7 @@ const HomePage = ({startGameOnClick, mineNumOnChange, boardSizeOnChange, mineNum
               <button className = "btn" onClick={()=>{setShowPanel(!showPanel)}}>Difficulty Adjustment</button>
               { showPanel ? 
                 <div className = "controlWrapper" >
-                  <div className = "error" style={{color:(error ? '#880000' : '#880000')}}>ERROR: Mines number and board size are invalid!</div>
+                  <div className = "error" style={{color:(mineNum > boardSize * boardSize  ? '#880000' : 'transparent')}}>ERROR: Mines number and board size are invalid!</div>
                   <div className = "controlPanel">
                     <div className = "controlCol" >
                       <p className = "controlTitle" >Mines Number</p>
