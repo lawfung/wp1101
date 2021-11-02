@@ -107,25 +107,26 @@ const Board = ({ boardSize, mineNum, backToHome }) => {
 
     return(
         <div className = 'boardPage' >
-            {win || gameOver ? <Modal restartGame={restartGame} backToHome={backToHome} win={win}></Modal> : <></>}
+            
             <div className = 'boardWrapper' >
+                {win || gameOver ? <Modal restartGame={restartGame} backToHome={backToHome} win={win}></Modal> : <></>}
             {/* <h1>This is the board Page!</h1>  This line of code is just for testing. Please delete it if you finish this function. */}
             
             {/* -- TODO 3-1 -- */}
             {/* Useful Hint: The board is composed of BOARDSIZE*BOARDSIZE of Cell (2-dimention). So, nested 'map' is needed to implement the board.  */}
             {/* Reminder: Remember to use the component <Cell> and <Dashboard>. See Cell.js and Dashboard.js for detailed information. */}
-            <div className="boardContainer">
-                <Dashboard remainFlagNum={remainFlagNum} gameOver={gameOver}></Dashboard>
-                {board.map( (row, idr) =>(
-                        <div id={"row"+idr} style={{display:"flex"}}>
-                            {row.map( (cc, idc) => (
-                                    <Cell rowIdx={idr} colIdx={idc} detail={cc} updateFlag={updateFlag} revealCell={revealCell}></Cell>
-                                )
-                            )}
-                        </div>
-                    )
-                )}
-            </div>
+                <div className="boardContainer">
+                    <Dashboard remainFlagNum={remainFlagNum} gameOver={gameOver}></Dashboard>
+                    {board.map( (row, idr) =>(
+                            <div id={"row"+idr} style={{display:"flex"}}>
+                                {row.map( (cc, idc) => (
+                                        <Cell rowIdx={idr} colIdx={idc} detail={cc} updateFlag={updateFlag} revealCell={revealCell}></Cell>
+                                    )
+                                )}
+                            </div>
+                        )
+                    )}
+                </div>
             </div>
         </div>
     ); 
