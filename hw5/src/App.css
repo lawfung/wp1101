@@ -1,0 +1,25 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.Display {
+  width: 100%;
+  font-size: 16vh;
+  text-align: right;
+  color: #eee;
+  background-color: black;
+}
+
+.Panel {
+  display: flex;
+  flex-wrap: wrap;
+  flex : auto;
+}
+
+.Panel > button{
+  width: 20%;
+  font-size: 6vh;
+  /* flex: auto; */
+}
