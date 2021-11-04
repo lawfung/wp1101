@@ -22,7 +22,11 @@ function App() {
   )
   return (
     <div className="App">
-      <div className="Display"> {errmsg || waiting || holding} </div>
+      <div className="Display1">
+        <div className="DisplayM"> Mem : {memory} </div>
+        <div className="DisplayS"> {((!errmsg) && waiting) ? holding + operat : ""} </div>
+      </div>
+      <div className="Display2"> {errmsg || waiting || (holding + (operat ? operat : "")) } </div>
       <div className="Panel">
         <button onClick={dummy_handleClick("C")}>C</button>
         <button onClick={dummy_handleClick("MC")}>MC</button>

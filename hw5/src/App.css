@@ -3,13 +3,29 @@
   flex-direction: column;
   height: 100%;
 }
-
-.Display {
+.Display1 {
+  display: flex;
+}
+.Display2 {
   width: 100%;
-  font-size: 16vh;
+  font-size: 12vh;
   text-align: right;
   color: #eee;
   background-color: black;
+}
+.DisplayM {
+  width: 50%;
+  font-size: 5vh;
+  text-align: right;
+  color: #eee;
+  background-color: #aaa;
+}
+.DisplayS {
+  width: 50%;
+  font-size: 5vh;
+  text-align: right;
+  color: #eee;
+  background-color: #555;
 }
 
 .Panel {
