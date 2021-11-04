@@ -1,5 +1,7 @@
 # wp1101
 
+This calculator is based on an old android calculator.
+
 ## Explanations
 
 1. The extra 3 operators are "+/-", "%", "abs".
