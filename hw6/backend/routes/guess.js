@@ -7,7 +7,7 @@ router.post('/start', (_, res) => {
 })
 router.get('/guess', (req, res) => {
   const number = getNumber()
-  const guessed = (req.query.number).match(/^[1-9][0-9]+$/) && parseInt(req.query.number, 10);
+  const guessed = (req.query.number).match(/^[1-9][0-9]*$/) && parseInt(req.query.number, 10);
   // roughScale(req.query.number, 10)
   // check if NOT a num or not in range [1,100]
   // console.log(guessed)
