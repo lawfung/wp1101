@@ -1,39 +1,18 @@
-import { useState, useEffect, useRef } from 'react'
-import './App.css'
-import { Button, Input, Tag, message } from 'antd'
-import useChat from './useChat'
+import Title from '../Components/Title';
+import Message from '../Components/Message';
+import { Button, Input, Tag } from 'antd';
 
-function App() {
-  const { status, messages, sendMessage, clearMessages } = useChat()
-  const [username, setUsername] = useState('')
-  const [body, setBody] = useState('')  // textBody
-  const bodyRef = useRef(null)
-  const displayStatus = (payload) => {
-    if (payload.msg) {
-      const { type, msg } = payload
-      const content = { content: msg, duration: 0.5 }
-      switch (type) {
-        case 'success':
-          message.success(content)
-          break
-        case 'error':
-        default:
-          message.error(content)
-          break
-      }
-    }
-  }
-  useEffect(() => { displayStatus(status) }, [status])
 
+const Chatroom = ({messages, sendMessage, clearMessages, username, setUsername, body, setBody, bodyRef, displayStatus, me} ) => {
   return (
-    <div className="App">
-      <div className="App-title">
+    <>
+      <Title>
         <h1>Simple Chat</h1>
         <Button type="primary" danger onClick={clearMessages}>
           Clear
         </Button>
-      </div>
-      <div className="App-messages">
+      </Title>
+      <Message>
         {messages.length === 0 ? (
           <p style={{ color: '#ccc' }}> No messages... </p>
         ) : (
@@ -43,14 +22,14 @@ function App() {
             </p>
           ))
         )}
-      </div>
-      <Input
+      </Message>
+      {/* <Input
         placeholder="Username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         style={{ marginBottom: 10 }}
         onKeyDown={(e) => { if (e.key === 'Enter') { bodyRef.current.focus() }}}  
-      ></Input>
+      ></Input> */}
       <Input.Search
         value={body}
         ref={bodyRef}
@@ -58,16 +37,15 @@ function App() {
         enterButton="Send"
         placeholder="Type a message here..."
         onSearch={(msg) => {
-          if(!msg || !username){
+          if(!msg || !me){
             displayStatus({type: 'error', msg :'Please enter a username and a message body.'})
             return
           }
-          sendMessage({ name: username, body: msg })
+          sendMessage({ name: me, body: msg })
           setBody('')
         }}
       ></Input.Search>
-    </div>
+    </>
   )
 }
-
-export default App
+export default Chatroom;

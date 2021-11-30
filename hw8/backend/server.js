@@ -16,6 +16,9 @@ mongoose.connect(process.env.MONGO_URL, {
 })
 
 const db = mongoose.connection
+db.on("error", (error) => {
+    throw new Error("DB connection error: " + error);
+});
 
 const app = express();
 const server = http.createServer(app);
