@@ -6,11 +6,11 @@
 * 影片連結
     * https://www.youtube.com/watch?v=-xZ90oEKjb8
 * 服務簡介:
-    * 這個網站以虛擬貨幣為例，以過去的真實資料模擬交易的環境。使用者可以選定過去的一段時間、時間的尺度大小，以及要模擬的市場來進行回測。回測實會依序給出當時的市場價格，使用者可以選擇以買或賣的方式模擬做多、做空市場，回測結束後也可以去記錄區檢視自己的交易獲利的情況。
+    * 這個網站以虛擬貨幣為例，以過去的真實資料模擬交易的環境。使用者可以選定過去的一段時間、時間的尺度大小，以及要模擬的市場來進行回測。回測時會依序給出當時的市場價格，使用者可以選擇以買或賣的方式模擬做多、做空市場，回測結束後也可以去記錄區檢視自己的交易獲利的情況。
 * Deployed link:
     * http://35.201.222.54/
     * 網管聯絡方式：
-        * b07902136 楊子平
+        * b07902136 楊子平 (可寄信或以 Facebook 聯繫)
 * 使用/操作方式：
     1. 先於右上角 Register 註冊帳號
     2. Login 進入網站
@@ -21,8 +21,14 @@
             * 時間間距：可以選擇要模擬的最小時間刻度，有 1min, 5min, 15min, 1hr, 4hr, 1day 可供選擇。
             * 市場名稱：支援所有 FTX 交易所有有上線的美金現貨交易對，具體可以參考 https://ftx.com/markets/ ，可輸入完整的交易對名稱，或是以幣種來進行表示。舉例來說可以輸入 BTC, ETH, BNB, MATIC, DOGE, SHIB, BTC/USD, ETH/USD, SOL/USD 等。
             * 要觀測/回測的時間範圍，時間範圍要滿足在該時間段 FTX 交易所已經上線完畢。
+            * 舉例來說，可以輸入：
+                1. Name: BTC_Test, Start time: 2021/01/01 00:00, End Time: 2021/01/31 00:00, Asset type: BTC, Time Scale: 1 min。
+                2. Name: ETH_Test, Start time: 2021/01/01 00:00, End Time: 2021/03/31 00:00, Asset type: ETH, Time Scale: 15 min。
+                3. Name: XRP_Test, Start time: 2021/01/01 00:00, End Time: 2021/02/02 01:34, Asset type: XRP/USD, Time Scale: 1 day。
+                4. Name: DOGE_Test, Start time: 2021/03/01 00:00, End Time: 2021/12/01 00:00, Asset type: DOGE, Time Scale: 4 hr。
+                5. Name: SHIB_Test, Start time: 2021/07/07 12:00, End Time: 2021/12/31 12:00, Asset type: SHIB, Time Scale: 1 min。
         * MONITER：依照選定的時間，MONITER 會展示出時間內的指定市場的價格走勢。
-        * BACKTEST：依照選定的時間回測，從選定的時間開始，可以通過按 Jump 來前進時間軸。並通過右上方的買賣按鍵來模擬交易行為。
+        * BACKTEST：依照選定的時間回測，從選定的時間開始，可以通過按 Jump 來前進時間軸。並通過右上方的買賣按鍵來模擬交易行為。結束之後可以儲存 Record 。
 * 使用之框架/模組/套件/程式碼
     * 前端：
         - React
@@ -44,7 +50,7 @@
         - uuid
 * Directory Tree
     ```
-    .
+    Final
     ├── frontend
     |   ├── ......
     |   └── src
