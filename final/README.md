@@ -29,6 +29,13 @@
                 5. Name: SHIB_Test, Start time: 2021/07/07 12:00, End Time: 2021/12/31 12:00, Asset type: SHIB, Time Scale: 1 min。
         * MONITER：依照選定的時間，MONITER 會展示出時間內的指定市場的價格走勢。
         * BACKTEST：依照選定的時間回測，從選定的時間開始，可以通過按 Jump 來前進時間軸。並通過右上方的買賣按鍵來模擬交易行為。結束之後可以儲存 Record 。
+   4. 選擇畫面上方的 User 可以檢視儲存的紀錄與策略
+        * 於畫面左方選擇 Record，可以檢視所有交易紀錄。
+            * 點擊刪除圖示可以刪除交易紀錄。
+        * 於畫面左方選擇 Strategy，可以檢視所有策略名稱。
+            * 點擊 Strategy 名稱，可以檢視該 Strategy 下的所有紀錄。
+            * 可以點擊 Strategy 欄位的編輯/刪除圖示來編輯 Strategy 名稱或刪除該 Strategy。
+        * 於畫面左方選擇 Setting 可以修改密碼。
 * 使用之框架/模組/套件/程式碼
     * 前端：
         - React
